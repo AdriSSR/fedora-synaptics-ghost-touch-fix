@@ -6,7 +6,7 @@ echo "🚀 Iniciando la reparación del touchpad..."
 # Verificar si se ejecuta como root
 if [ "$EUID" -ne 0 ]; then 
   echo "❌ Por favor, ejecuta el script con sudo: sudo ./install.sh"
-  exit
+  exit 1
 fi
 
 # Crear el directorio si no existe
