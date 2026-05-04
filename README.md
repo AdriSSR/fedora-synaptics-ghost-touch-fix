@@ -11,7 +11,7 @@ If you are using a laptop (commonly an HP Envy, HP Pavilion, or Omen) with the *
 * Phantom 3-finger or 4-finger swipes.
 * Workspaces switching automatically without you touching the pad.
 
-**How to verify if you have this hardware bug:**
+### 🔍 Method 1: Check System Logs
 Check your system logs by running this command in your terminal:
 
 ```bash
@@ -19,6 +19,17 @@ sudo journalctl -k | grep -i "Touch jump detected"
 ```
 
 If you see an output like `kernel bug: Touch jump detected and discarded`, your hardware is sending electrical noise/static, and this fix is exactly what you need!
+
+### 👀 Method 2: Live Monitoring (Advanced Verification)
+If you want to catch the hardware sending "ghost touches" in real-time, you can use the official `libinput` debugging tool:
+
+1. Run the following command in your terminal:
+```bash
+sudo libinput debug-events
+```
+2. Start making quick, rough gestures on your touchpad (rapid tapping, fast multi-finger swipes, or erratic movements) to stress-test the hardware.
+3. Watch the terminal. If you start seeing lines like `kernel bug: Touch jump detected and discarded` or a flood of `GESTURE_SWIPE` events right when the cursor glitches, your touchpad is failing to filter the static interference properly.
+4. Press `Ctrl + C` to stop the monitoring tool.
 
 ---
 
