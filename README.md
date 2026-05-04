@@ -32,12 +32,12 @@ Run these commands one by one in your terminal. *(Hover over the code blocks to 
 
 **1. Clone this repository:**
 ```bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+git clone [https://github.com/AdriSSR/fedora-synaptics-ghost-touch-fix.git](https://github.com/AdriSSR/fedora-synaptics-ghost-touch-fix.git)
 ```
 
 **2. Enter the directory:**
 ```bash
-cd YOUR_REPO_NAME
+cd fedora-synaptics-ghost-touch-fix
 ```
 
 **3. Make the script executable:**
@@ -48,11 +48,6 @@ chmod +x install.sh
 **4. Run the installer:**
 ```bash
 sudo ./install.sh
-```
-
-**5. Reboot your system:**
-```bash
-reboot
 ```
 
 ---
